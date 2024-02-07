@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\API\\API.csproj": {}
+    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\API\\API.csproj": {
+    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\API\\API.csproj",
+        "projectUniqueName": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\API\\API.csproj",
+        "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\API\\API.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\API\\obj\\",
+        "outputPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -30,8 +30,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Application\\Application.csproj": {
-                "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Application\\Application.csproj"
+              "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Application\\Application.csproj": {
+                "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Application\\Application.csproj"
               }
             }
           }
@@ -78,14 +78,14 @@
         }
       }
     },
-    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Application\\Application.csproj": {
+    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Application\\Application.csproj",
+        "projectUniqueName": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Application\\Application.csproj",
+        "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Application\\obj\\",
+        "outputPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -103,11 +103,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Domain\\Domain.csproj"
+              "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Domain\\Domain.csproj"
               },
-              "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Persistence\\Persistence.csproj": {
-                "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Persistence\\Persistence.csproj"
+              "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Persistence\\Persistence.csproj": {
+                "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Persistence\\Persistence.csproj"
               }
             }
           }
@@ -141,14 +141,14 @@
         }
       }
     },
-    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Domain\\Domain.csproj": {
+    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Domain\\Domain.csproj",
+        "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Domain\\obj\\",
+        "outputPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -197,14 +197,14 @@
         }
       }
     },
-    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Persistence\\Persistence.csproj": {
+    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Persistence\\Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Persistence\\Persistence.csproj",
+        "projectUniqueName": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Persistence\\Persistence.csproj",
         "projectName": "Persistence",
-        "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Persistence\\Persistence.csproj",
+        "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Persistence\\Persistence.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Persistence\\obj\\",
+        "outputPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Persistence\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -222,8 +222,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Domain\\Domain.csproj"
+              "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Domain\\Domain.csproj"
               }
             }
           }

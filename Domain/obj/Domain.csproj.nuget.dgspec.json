@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Domain\\Domain.csproj": {}
+    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Domain\\Domain.csproj": {
+    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Domain\\Domain.csproj",
+        "projectUniqueName": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Domain\\Domain.csproj",
+        "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Domain\\obj\\",
+        "outputPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",

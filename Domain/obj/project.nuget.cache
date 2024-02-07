@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XYEwAPVNfDRC1CK3DS8fheoegF6JTdxGUxJ+uqJThB/DFgXD6SZOzbWa9qqjsx4oshAm/aOVMmD/lBEacop/Zg==",
+  "dgSpecHash": "z1mPDs4djdKo5Ayrd9sTjvRXLEBYseJIUeh36CXnBXt9K3Cf7bCvvELKIC4vw2dH7YnwcxvvRzzmJi1tJFoHvg==",
   "success": true,
-  "projectFilePath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Domain\\Domain.csproj",
+  "projectFilePath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
