@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KVHlKPBCvf9pI+pv1/UngKraxU0kkIlxqrLGwaNKDzz58S5ev7RT/Vfar+ZoXLXdTAswFrcq+iYq2+NLxwH2vQ==",
+  "dgSpecHash": "HxPCR/dOnxoDihu6Ztr8YaYjoHRACvmTshzOF90UwRG4IeSsuC1mmczUOsFgZwoXlJ2MloYNLMFMzV02uKpp2g==",
   "success": true,
-  "projectFilePath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Persistence\\Persistence.csproj",
+  "projectFilePath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

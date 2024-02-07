@@ -527,11 +527,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\API\\API.csproj",
+      "projectUniqueName": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\API\\API.csproj",
       "projectName": "API",
-      "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\API\\API.csproj",
+      "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\API\\API.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\API\\obj\\",
+      "outputPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -550,8 +550,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Application\\Application.csproj": {
-              "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Reactivities\\Application\\Application.csproj"
+            "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Application\\Application.csproj": {
+              "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\Application\\Application.csproj"
             }
           }
         }
