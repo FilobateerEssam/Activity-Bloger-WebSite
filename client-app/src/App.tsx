@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import axios from "axios";
+import { Button, Header, List } from "semantic-ui-react";
 
 function App() {
   const [activities, setActivities] = useState([]);
@@ -18,18 +19,14 @@ function App() {
   }, []); // that mean that we only do this once
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+    <div>
+      <Header as="h2" icon="users" content="ReactActivities" />
 
-        <ul>
-          {activities.map((activity:any) => (
-            <li key={activity.id}>
-              {activity.title}
-            </li>
-          ))}
-        </ul>
-      </header>
+      <List>
+        {activities.map((activity: any) => (
+          <List.Item key={activity.id}>{activity.title}</List.Item>
+        ))}
+      </List>
     </div>
   );
 }

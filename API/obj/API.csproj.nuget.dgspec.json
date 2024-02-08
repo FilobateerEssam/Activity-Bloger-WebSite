@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\api\\API.csproj": {}
+    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\api\\API.csproj": {
+    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\api\\API.csproj",
+        "projectUniqueName": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\api\\API.csproj",
+        "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\API\\API.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\api\\obj\\",
+        "outputPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -127,6 +127,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
