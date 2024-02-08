@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\API\\API.csproj": {}
+    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\api\\API.csproj": {}
   },
   "projects": {
-    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\API\\API.csproj": {
+    "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\api\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\API\\API.csproj",
+        "projectUniqueName": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\api\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\API\\API.csproj",
+        "projectPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\api\\API.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\API\\obj\\",
+        "outputPath": "D:\\CORCE\\.Net\\Tests\\Activity-Bloger-WebSite\\api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
