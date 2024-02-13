@@ -24,5 +24,39 @@ namespace API.Controllers
         {
             return await Mediator.Send(new Details.Query { Id = id });
         }
+
+
+        [HttpPost] // api/activities
+
+        // We are Not returning Activity object
+        // IActionResult help to access Http responses type
+        //                                             [From body] 
+        public async Task<IActionResult> CreateActivity(Activity activity)
+        {
+            return Ok(await Mediator.Send(new Create.Command { Activity = activity }));
+        }
+
+
+        [HttpPut("{id}")] // api/activities
+
+        // We are Not returning Activity object
+        // IActionResult help to access Http responses type
+
+        public async Task<IActionResult> EditActivity(Guid  id, Activity activity)
+        {
+            activity.Id = id;
+            return Ok(await Mediator.Send(new Edit.Command { Activity = activity }));
+        }
+
+
+        [HttpDelete("{id}")] // api/activities
+
+        // We are Not returning Activity object
+        // IActionResult help to access Http responses type
+
+        public async Task<IActionResult> DeleteActivity(Guid id)
+        {
+            return Ok(await Mediator.Send(new Delete.Command { Id = id }));
+        }
     }
 }
