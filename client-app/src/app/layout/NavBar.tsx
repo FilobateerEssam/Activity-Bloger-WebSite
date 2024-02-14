@@ -3,6 +3,7 @@ import { Button, Container, Menu } from "semantic-ui-react";
 
 export default function NavBar() {
   return (
+    // inverted for time line Color 
     <Menu inverted fixed="top">
       <Container>
         <Menu.Item header>
