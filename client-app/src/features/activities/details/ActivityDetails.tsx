@@ -5,10 +5,11 @@ import { Activity } from "../../../app/models/activity";
 interface Props {
     activity : Activity
     cancelselectedActivity : () => void;
+    OpenForm : (id : string) => void;
 
 }
 
-export default function ActivityDetails({activity , cancelselectedActivity}: Props) {
+export default function ActivityDetails({activity , cancelselectedActivity,OpenForm}: Props) {
   return (
     
     // fluid is used to Stretch the Card
@@ -26,7 +27,7 @@ export default function ActivityDetails({activity , cancelselectedActivity}: Pro
       </Card.Content>
       <Card.Content extra>
          <Button.Group widths='2'>
-                <Button  basic color='blue' content='Edit' />
+                <Button onClick={()=> OpenForm(activity.id) } basic color='blue' content='Edit' />
                 <Button onClick={cancelselectedActivity} basic color='grey' content='Cancel' />
          </Button.Group>
 

@@ -7,10 +7,15 @@ import ActivityDashboard from "../../features/activities/dashboard/ActivityDashb
 
 function App() {
   
+  // For Hold All Data From APi
   const [activities, setActivities] = useState<Activity[]>([]);
 
+  // For Select Specific Activity
   const [selectedActivity,setselectedActivity] = useState<Activity | undefined>(undefined);
   
+  // For Edit Specific Activity
+  const [EditMode , setEditMode] = useState(false);
+
   // What will happen when the App is Loaded
 
   useEffect(() => {
@@ -32,6 +37,18 @@ function handleSelectActivity(id: string){
 function handleCancelSelectActivity(){
   setselectedActivity(undefined)
 }
+
+function handleFormOpen(id ? : string){
+
+  id ? handleSelectActivity(id) : handleCancelSelectActivity();
+  setEditMode(true);
+}
+
+function handleFormClose(){
+  setEditMode(false);
+}
+
+
   return (
 
     // <> </> mean Fragment
@@ -39,7 +56,7 @@ function handleCancelSelectActivity(){
     <>
 
       {/* Header  */}
-      <NavBar />
+      <NavBar OpenForm = {handleFormOpen} />
 
       <Container style={{marginTop:'7em'}} >
 
@@ -50,6 +67,10 @@ function handleCancelSelectActivity(){
         selectedActivity = {selectedActivity}
         selectActivity = {handleSelectActivity}
         cancelselectedActivity = {handleCancelSelectActivity}
+    
+        editMode = {EditMode}
+        OpenForm = {handleFormOpen}
+        CloseForm = {handleFormClose}
         />
 
       </Container>

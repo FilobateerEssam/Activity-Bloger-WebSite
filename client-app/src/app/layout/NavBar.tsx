@@ -1,7 +1,13 @@
 import React from "react";
 import { Button, Container, Menu } from "semantic-ui-react";
+import { Activity } from "../models/activity";
 
-export default function NavBar() {
+interface Props{
+
+  OpenForm : () => void;
+}
+
+export default function NavBar({OpenForm}:Props) {
   return (
     // inverted for time line Color 
     <Menu inverted fixed="top">
@@ -12,7 +18,7 @@ export default function NavBar() {
         </Menu.Item>
         <Menu.Item name="Activities" />
         <Menu.Item>
-          <Button positive content="Create Activity" />
+          <Button onClick={OpenForm} positive content="Create Activity" />
         </Menu.Item>
       </Container>
     </Menu>
