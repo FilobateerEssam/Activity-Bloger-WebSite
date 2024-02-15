@@ -4,6 +4,8 @@ import { Button, Container, Header, List } from "semantic-ui-react";
 import { Activity } from "../models/activity";
 import NavBar from "./NavBar";
 import ActivityDashboard from "../../features/activities/dashboard/ActivityDashboard";
+import { v4 as uuid} from "uuid";
+
 
 function App() {
   
@@ -38,6 +40,7 @@ function handleCancelSelectActivity(){
   setselectedActivity(undefined)
 }
 
+// Form Will Used For Create & Edit Activity
 function handleFormOpen(id ? : string){
 
   id ? handleSelectActivity(id) : handleCancelSelectActivity();
@@ -48,6 +51,27 @@ function handleFormClose(){
   setEditMode(false);
 }
 
+function handleCreateOrEditingactivity(activity : Activity){
+
+  // check if activity is already Exist by Id Will Edit it 
+
+  activity.id 
+  
+  ? setActivities([...activities.filter(x => x.id !== activity.id) , activity]) 
+
+  // if we don't already have will create a new activity with Auto Generate id
+
+  : setActivities([...activities,{...activity, id: uuid()}]); 
+
+  setEditMode(false);
+  setselectedActivity(activity);
+}
+
+function handleDeleteActivity(id : string){
+
+  setActivities([...activities.filter(x => x.id !== id)])
+
+}
 
   return (
 
@@ -71,6 +95,10 @@ function handleFormClose(){
         editMode = {EditMode}
         OpenForm = {handleFormOpen}
         CloseForm = {handleFormClose}
+        CreateOrEditing = {handleCreateOrEditingactivity}
+        deleteActivity = {handleDeleteActivity}
+
+
         />
 
       </Container>

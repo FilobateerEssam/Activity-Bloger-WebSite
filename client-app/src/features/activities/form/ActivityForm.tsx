@@ -5,15 +5,20 @@ import { Activity } from "../../../app/models/activity";
 interface Props {
   activity: Activity | undefined;
   CloseForm: () => void;
+  CreateOrEditing : (activity : Activity) => void;
 }
 
 export default function ActivityForm({
   activity: selectedActivity,
   CloseForm,
+  CreateOrEditing
 }: Props)
  {
 
   const initialState = selectedActivity ?? {
+
+    // Id is "" Will use Guid to Give the Activity ID :
+    
     id: "",
     title: "",
     category: "",
@@ -26,7 +31,7 @@ export default function ActivityForm({
   const [activity, setActivity] = useState(initialState);
 
   function handleSubmit() {
-    console.log(activity);
+    CreateOrEditing(activity);
   }
 
   function handleInputChange(event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
@@ -35,7 +40,7 @@ export default function ActivityForm({
 
     const { name, value } = event.target;
 
-    // ... called ellipses way to tell that we want to change in activity
+    // ... called ellipses way to loop over Existing Elements & tell that we want to change in activity
     // [name] mean will change in activity.title or activity.date or activity.city ....etc
     // : value mean with that value
 
