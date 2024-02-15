@@ -1,116 +1,108 @@
 import React, { useEffect, useState } from "react";
-import {Container, Header, List } from "semantic-ui-react";
+import { Container, Header, List } from "semantic-ui-react";
 import { Activity } from "../models/activity";
 import NavBar from "./NavBar";
 import ActivityDashboard from "../../features/activities/dashboard/ActivityDashboard";
-import { v4 as uuid} from "uuid";
+import { v4 as uuid } from "uuid";
 import agent from "../Api/agent";
-
+import LoadingComponents from "./LoadingComponents";
 
 function App() {
-  
   // For Hold All Data From APi
   const [activities, setActivities] = useState<Activity[]>([]);
 
   // For Select Specific Activity
-  const [selectedActivity,setselectedActivity] = useState<Activity | undefined>(undefined);
-  
+  const [selectedActivity, setselectedActivity] = useState<
+    Activity | undefined
+  >(undefined);
+
   // For Edit Specific Activity
-  const [EditMode , setEditMode] = useState(false);
+  const [EditMode, setEditMode] = useState(false);
+
+  // for Loading 
+  const [loading, setLoading] = useState(true);
 
   // What will happen when the App is Loaded
 
   useEffect(() => {
     // Will get Data From API
 
-      agent.Activities.list()
-      .then((response) => {
+    agent.Activities.list().then((response) => {
+      // Edit the Date before loading
 
-        // Edit the Date before loading
-
-        let activities : Activity[] = [];
-        response.forEach(activity => {
-          activity.date = activity.date.split('T')[0];
-          activities.push(activity);
-        })
-        setActivities(response);
+      let activities: Activity[] = [];
+      response.forEach((activity) => {
+        activity.date = activity.date.split("T")[0];
+        activities.push(activity);
       });
+      setActivities(response);
+      setLoading(false);
+    });
   }, []); // that mean that we only do this once
 
+  function handleSelectActivity(id: string) {
+    setselectedActivity(activities.find((x) => x.id === id));
+  }
 
-function handleSelectActivity(id: string){
+  function handleCancelSelectActivity() {
+    setselectedActivity(undefined);
+  }
 
-  setselectedActivity(activities.find(x => x.id === id));
-}
+  // Form Will Used For Create & Edit Activity
+  function handleFormOpen(id?: string) {
+    id ? handleSelectActivity(id) : handleCancelSelectActivity();
+    setEditMode(true);
+  }
 
-function handleCancelSelectActivity(){
-  setselectedActivity(undefined)
-}
+  function handleFormClose() {
+    setEditMode(false);
+  }
 
-// Form Will Used For Create & Edit Activity
-function handleFormOpen(id ? : string){
+  function handleCreateOrEditingactivity(activity: Activity) {
+    // check if activity is already Exist by Id Will Edit it
 
-  id ? handleSelectActivity(id) : handleCancelSelectActivity();
-  setEditMode(true);
-}
+    activity.id
+      ? setActivities([
+          ...activities.filter((x) => x.id !== activity.id),
+          activity,
+        ])
+      : // if we don't already have will create a new activity with Auto Generate id
 
-function handleFormClose(){
-  setEditMode(false);
-}
+        setActivities([...activities, { ...activity, id: uuid() }]);
 
-function handleCreateOrEditingactivity(activity : Activity){
+    setEditMode(false);
+    setselectedActivity(activity);
+  }
 
-  // check if activity is already Exist by Id Will Edit it 
+  function handleDeleteActivity(id: string) {
+    setActivities([...activities.filter((x) => x.id !== id)]);
+  }
 
-  activity.id 
-  
-  ? setActivities([...activities.filter(x => x.id !== activity.id) , activity]) 
 
-  // if we don't already have will create a new activity with Auto Generate id
-
-  : setActivities([...activities,{...activity, id: uuid()}]); 
-
-  setEditMode(false);
-  setselectedActivity(activity);
-}
-
-function handleDeleteActivity(id : string){
-
-  setActivities([...activities.filter(x => x.id !== id)])
-
-}
+if(loading) return <LoadingComponents content="loading app" />
 
   return (
-
     // <> </> mean Fragment
 
     <>
-
       {/* Header  */}
-      <NavBar OpenForm = {handleFormOpen} />
+      <NavBar OpenForm={handleFormOpen} />
 
-      <Container style={{marginTop:'7em'}} >
-
+      <Container style={{ marginTop: "7em" }}>
         {/* using Props  */}
 
-        < ActivityDashboard 
-        activities = {activities}  
-        selectedActivity = {selectedActivity}
-        selectActivity = {handleSelectActivity}
-        cancelselectedActivity = {handleCancelSelectActivity}
-    
-        editMode = {EditMode}
-        OpenForm = {handleFormOpen}
-        CloseForm = {handleFormClose}
-        CreateOrEditing = {handleCreateOrEditingactivity}
-        deleteActivity = {handleDeleteActivity}
-
-
+        <ActivityDashboard
+          activities={activities}
+          selectedActivity={selectedActivity}
+          selectActivity={handleSelectActivity}
+          cancelselectedActivity={handleCancelSelectActivity}
+          editMode={EditMode}
+          OpenForm={handleFormOpen}
+          CloseForm={handleFormClose}
+          CreateOrEditing={handleCreateOrEditingactivity}
+          deleteActivity={handleDeleteActivity}
         />
-
       </Container>
-
-
     </>
   );
 }
