@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Header, List } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
 import { Activity } from "../models/activity";
 import NavBar from "./NavBar";
 import ActivityDashboard from "../../features/activities/dashboard/ActivityDashboard";
@@ -19,8 +19,11 @@ function App() {
   // For Edit Specific Activity
   const [EditMode, setEditMode] = useState(false);
 
-  // for Loading 
+  // for Loading
   const [loading, setLoading] = useState(true);
+
+  // For Submitting
+  const [Submitting, setSubmitting] = useState(false);
 
   // What will happen when the App is Loaded
 
@@ -59,27 +62,45 @@ function App() {
   }
 
   function handleCreateOrEditingactivity(activity: Activity) {
-    // check if activity is already Exist by Id Will Edit it
+    setSubmitting(true);
 
-    activity.id
-      ? setActivities([
+    // check if activity is already Exist by Id Will Edit it
+    if (activity.id) {
+      agent.Activities.update(activity).then(() => {
+        setActivities([
           ...activities.filter((x) => x.id !== activity.id),
           activity,
-        ])
-      : // if we don't already have will create a new activity with Auto Generate id
-
-        setActivities([...activities, { ...activity, id: uuid() }]);
-
-    setEditMode(false);
-    setselectedActivity(activity);
+        ]);
+        setselectedActivity(activity);
+        setEditMode(false);
+        setSubmitting(false);
+      });
+    }
+    // if we don't already have will create a new activity with Auto Generate id
+    else {
+      activity.id = uuid();
+      agent.Activities.create(activity).then(() => {
+        setActivities([...activities, activity]);
+        setselectedActivity(activity);
+        setEditMode(false);
+        setSubmitting(false);
+      });
+    }
   }
 
   function handleDeleteActivity(id: string) {
-    setActivities([...activities.filter((x) => x.id !== id)]);
+
+    setSubmitting(true);
+
+    agent.Activities.delete(id).then(() => {
+      
+      setActivities([...activities.filter((x) => x.id !== id)]);
+      setSubmitting(false);
+
+    });
   }
 
-
-if(loading) return <LoadingComponents content="loading app" />
+  if (loading) return <LoadingComponents content="loading app" />;
 
   return (
     // <> </> mean Fragment
@@ -101,6 +122,7 @@ if(loading) return <LoadingComponents content="loading app" />
           CloseForm={handleFormClose}
           CreateOrEditing={handleCreateOrEditingactivity}
           deleteActivity={handleDeleteActivity}
+          submitting={Submitting}
         />
       </Container>
     </>
