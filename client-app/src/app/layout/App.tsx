@@ -1,10 +1,10 @@
-import React, { Fragment, useEffect, useState } from "react";
-import axios from "axios";
-import { Button, Container, Header, List } from "semantic-ui-react";
+import React, { useEffect, useState } from "react";
+import {Container, Header, List } from "semantic-ui-react";
 import { Activity } from "../models/activity";
 import NavBar from "./NavBar";
 import ActivityDashboard from "../../features/activities/dashboard/ActivityDashboard";
 import { v4 as uuid} from "uuid";
+import agent from "../Api/agent";
 
 
 function App() {
@@ -23,10 +23,17 @@ function App() {
   useEffect(() => {
     // Will get Data From API
 
-    axios
-      .get<Activity[]>("http://localhost:5000/api/activities")
+      agent.Activities.list()
       .then((response) => {
-        setActivities(response.data);
+
+        // Edit the Date before loading
+
+        let activities : Activity[] = [];
+        response.forEach(activity => {
+          activity.date = activity.date.split('T')[0];
+          activities.push(activity);
+        })
+        setActivities(response);
       });
   }, []); // that mean that we only do this once
 
