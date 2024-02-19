@@ -1,15 +1,18 @@
 import React from "react";
 import { Button, Card, Icon, Image } from "semantic-ui-react";
-import { Activity } from "../../../app/models/activity";
+import { useStore } from "../../../app/Stores/store";
+import LoadingComponents from "../../../app/layout/LoadingComponents";
 
-interface Props {
-    activity : Activity
-    cancelselectedActivity : () => void;
-    OpenForm : (id : string) => void;
 
-}
 
-export default function ActivityDetails({activity , cancelselectedActivity,OpenForm}: Props) {
+export default function ActivityDetails() {
+
+  const {activityStore} = useStore();
+  const {selectedActivity : activity , cancelselectedActivity , openForm} = activityStore;
+
+
+if (! activity) return  <LoadingComponents />;
+
   return (
     
     // fluid is used to Stretch the Card
@@ -27,7 +30,7 @@ export default function ActivityDetails({activity , cancelselectedActivity,OpenF
       </Card.Content>
       <Card.Content extra>
          <Button.Group widths='2'>
-                <Button onClick={()=> OpenForm(activity.id) } basic color='blue' content='Edit' />
+                <Button onClick={()=> openForm(activity.id) } basic color='blue' content='Edit' />
                 <Button onClick={cancelselectedActivity} basic color='grey' content='Cancel' />
          </Button.Group>
 
